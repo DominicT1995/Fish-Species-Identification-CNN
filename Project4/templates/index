@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Classifier</title>
+</head>
+<body>
+    <h1>Upload an Image of a Fish</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="file">
+        <button type="button" onclick="uploadImage()">Upload</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        async function uploadImage() {
+            const formData = new FormData(document.getElementById('upload-form'));
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            document.getElementById('result').innerHTML = 
+                `Predicted Class: ${result.predicted_class} <br> Confidence: ${result.confidence}`;
+        }
+    </script>
+</body>
+</html>
