@@ -7,7 +7,7 @@ import os
 app = Flask(__name__, template_folder='templates')
 
 # Load your model (make sure to adjust the path to your model file)
-model = load_model('models/fish_identifier_model.h5')
+model = load_model('models/imageclassifier.h5')
 
 def predict_fish(image_path, model):
     img = image.load_img(image_path, target_size=(150, 150))
