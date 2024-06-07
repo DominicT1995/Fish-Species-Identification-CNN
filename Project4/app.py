@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
 
-app = Flask(__name__, template_folder='/Users/albertoalvarado/Desktop/prject 4 Albert/templates')
+app = Flask(__name__, template_folder='templates')
 
 # Load your model (make sure to adjust the path to your model file)
 model = load_model('models/fish_identifier_model.h5')
@@ -18,18 +18,10 @@ def predict_fish(image_path, model):
 
     prediction = model.predict(img_array)
     predicted_class_index = np.argmax(prediction, axis=1)[0]
-    class_labels = ['Red', 'Trout', 'Flounder','largemouth_bass','smallmouth_bass']
-    class_links = {
-        'Red': 'https://tpwd.texas.gov/huntwild/wild/species/redfish/',
-        'Trout': 'https://tpwd.texas.gov/huntwild/wild/species/spottedtrout/',
-        'Flounder': 'https://tpwd.texas.gov/huntwild/wild/species/southernflounder/',
-        'largemouth_bass': 'https://tpwd.texas.gov/huntwild/wild/species/largebass/',
-        'smallmouth_bass': 'https://tpwd.texas.gov/huntwild/wild/species/smallbass/'
-    }
+    class_labels = ['Red', 'Trout', 'Flounder','largemouth_bass','smallmouth_bass','Black Crappie','Cobia','King Mackerel','Snook','Tarpon','Tripletail',]
 
     predicted_class = class_labels[predicted_class_index]
     confidence = prediction[0][predicted_class_index]
-    link = class_links[predicted_class]
 
     
     return predicted_class, confidence
@@ -62,7 +54,7 @@ def predict():
     # Remove the temporary file
     os.remove(temp_file_path)
     
-    return jsonify({'predicted_class': predicted_class, 'confidence': confidence, 'link': link})
+    return jsonify({'predicted_class': predicted_class, 'confidence': confidence})
 
 if __name__ == '__main__':
     app.run(debug=True)
