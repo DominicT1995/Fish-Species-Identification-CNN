@@ -9,7 +9,7 @@ The aim of this project is to develop a machine learning model capable of classi
 Further enhancements to this project can effectively be beneficial to researchers, conservationists, and fishing enthusiasts. By following a structured approach, we aim to build an effective and user-friendly classification system.
 
 ## Process:
-We utilized a convolutional neural network model to test, train, and validate our image dataset. We also leveraged the following tools: Python, Flask, Web Based UI (HTML/CSS)
+We utilized a convolutional neural network model to test, train, and validate our image dataset. We also leveraged the following tools: Python, Flask, Web Based UI (HTML/Js), Tensorflow
 
 ## Data Source and Inspirations:
 https://www.kaggle.com/code/databeru/fish-classifier-grad-cam-viz-acc-99-89/notebook
@@ -23,3 +23,5 @@ https://medium.com/latinxinai/convolutional-neural-network-from-scratch-6b1c856e
 https://pyimagesearch.com/2021/05/14/convolutional-neural-networks-cnns-and-layer-types/
 
 https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations
+
+Dataset images were retrieved from Google
