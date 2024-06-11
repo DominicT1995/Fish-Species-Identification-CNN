@@ -1,0 +1,121 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(164, 171, 186);
+}
+
+#map,
+body,
+html {
+    height: 100%;
+}
+
+h1 {
+    color: #343a40;
+}
+
+div.card {
+    width: fit-content;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: rgb(128, 178, 238);
+
+}
+
+header.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    padding-left: 4rem;
+    text-align: left;
+    color: #c3d312;
+    background-image: url("https://www.americanoceans.org/wp-content/uploads/2023/11/depths-of-the-gulf-of-mexico-scaled.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+    header.masthead .masthead-subheading {
+        font-size: 2.25rem;
+        font-style: italic;
+        line-height: 2.25rem;
+        margin-bottom: 2rem;
+        margin-top: -2rem;
+    }
+    header.masthead .masthead-heading {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        margin-bottom: 4rem;
+    }
+}
+
+div.row {
+    padding-left: 4rem;
+}
+
+h3.primary {
+    padding-top: 0rem;
+}
+
+#upload {
+    padding-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+    padding-left: 20%;
+}
+
+button {
+    padding: 10px 20px;
+    width: 60%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+#instructions {
+    background-color: rgb(128, 178, 238);
+    margin-top: 20px;
+}
+
+#prediction {
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(128, 178, 238);
+}
