@@ -1,4 +1,5 @@
 # Fish-Species-Identification-CNN
+![banner image](https://github.com/DominicT1995/Fish-Species-Identification-CNN/blob/main/Project4/images/bannerCNN.png?raw=true)
 
 ## Group Members: 
 Alberto Alvarado, Jeff Neal, Dominic Thomas, Angelie Wanner
@@ -49,6 +50,7 @@ The number of layers, overall architecture, and hyperparameters including epochs
 In addition, two different optimizers (adam and sgd) were utilized in the compiling of the different model architectures with the sgd optimizer outperforming the adam optimizer when training on the full image dataset and thus used for final model compiling.
 
 Final Model Architecture:
+
 ![Model Architecture](https://github.com/DominicT1995/Fish-Species-Identification-CNN/blob/main/Project4/images/final_model_architecture.png?raw=true)
 
 ## Results:
@@ -66,7 +68,7 @@ Hyperparamters of final model include:
 
 The final model was then hosted on a web based Flask application allowing users to upload an image from their personal device and make a prediction between the 11 defined species of Texas game fish with confidence percentages of the prediction and information regarding the fish species relative to Texas game fishing regulations.
 
-place image here.
+![web model use](https://github.com/DominicT1995/Fish-Species-Identification-CNN/blob/main/Project4/images/predictionCNN.png?raw=true)
 
 ## Limitations:
 
